@@ -3,4 +3,4 @@ from .models import inventory, supplier
 
 # Register your models here.
 admin.site.register(inventory)
-# admin.site.register(supplier)
+admin.site.register(supplier)

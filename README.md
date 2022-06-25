@@ -53,7 +53,7 @@ http://127.0.0.1:8000/api/inventory/Queendom
 <img src="https://github.com/hmtschnk/kiratech/blob/main/staticfiles/readme_md/api_inventory_queendom.png" width="450">
 </p>
 
-User may filter the list by name using the top right corner of the page
+User may also filter the list by name using the top right corner of the page
 
 <p align="center">
 <img src="https://github.com/hmtschnk/kiratech/blob/main/staticfiles/readme_md/inventory.png" width="450">
