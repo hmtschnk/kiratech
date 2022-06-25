@@ -6,13 +6,17 @@ Kiratech project is developed to complete Kiratech's assignment
 1. Clone this repository to your local device
 
 2. In your local device, create a new Python environment and activate. In this example, we will name our environment as "kiratech_env"
+
 `$ python -m venv kiratech`
+
 `$ kiratech_env/Scripts/activate.bat`
 
 3. Go into the root of this project you just cloned, and install the dependencies
+
 `$ pip install requirements.txt`
 
-4. Run the project at localhost:8000
+4. Run the project and visit http://127.0.0.1:8000/inventory
+
 `$ python manage.py runserver`
 
 ## Project breakdown
@@ -53,6 +57,12 @@ User view the details of a specific inventory by adding inventory ID at the URL.
 </p>
 ## Question D
 Django admin can be accessed using the 'Admin' button at navigation bar or by using this link; http://127.0.0.1:8000/admin
+
+```
+Username: demo
+Password: demo
+```
+
 Admin may add new inventory records at invetorys
 
 ## Question C
