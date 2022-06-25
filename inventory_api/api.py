@@ -8,4 +8,5 @@ class inv_serializer(ModelSerializer):
             "id",
             "name",
             "supplier",
+            "availability",
         )

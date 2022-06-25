@@ -10,6 +10,8 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Supplier</th>
+                        <th scope="col">Availability</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -18,6 +20,12 @@
                         <th scope="row">{{ item.id }}</th>
                         <td>{{ item.name }}</td>
                         <td>{{ item.supplier }}</td>
+                        <td>{{ item.availability }}</td>
+                        <td>
+                            <form action="{% url 'inventory:search_by_id' item.id %}">
+                                <button type="submit" class="btn btn-primary">Details</button>
+                            </form>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

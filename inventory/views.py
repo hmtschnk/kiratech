@@ -5,13 +5,16 @@ from django.db.models import Q
 
 # Create your views here.
 def index(request):
-    # queryset = inventory.objects.all()
-    # context = {
-    #     'inventory': queryset,
-    # }
 
     response = requests.get('http://127.0.0.1:8000/api/inventory')
     inv_data = response.json()
+
+    # Get all suppliers
+    # supplier_name = supplier.objects.all().values('id','name')
+
+    for inv in inv_data["data"]:
+        inv["supplier"] = supplier.objects.filter(id=inv["supplier"]).values_list('name').first()[0]
+
     context = {
         'inv_list': inv_data['data'],
     }
