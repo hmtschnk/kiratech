@@ -57,6 +57,7 @@ User view the details of a specific inventory by adding inventory ID at the URL.
 </p>
 ## Question D
 Django admin can be accessed using the 'Admin' button at navigation bar or by using this link; http://127.0.0.1:8000/admin
+Below is the username and password:
 
 ```
 Username: demo
