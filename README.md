@@ -26,3 +26,31 @@ Django app called inventory is created containing two models; inventory and supp
 <img src="https://github.com/hmtschnk/kiratech/tree/main/staticfiles/thumbnail" width="450">
 </p>
 
+## Question B
+A list from model inventories at http://127.0.0.1:8000/inventory
+
+<p align="center">
+<img src="https://github.com/hmtschnk/kiratech/tree/main/staticfiles/thumbnail" width="450">
+</p>
+
+The result of the above page is retrieved from Django Rest Framework at http://127.0.0.1:8000/api/inventory
+
+<p align="center">
+<img src="https://github.com/hmtschnk/kiratech/tree/main/staticfiles/thumbnail" width="450">
+</p>
+
+User may filter the list by name using the top right corner of the page
+
+<p align="center">
+<img src="https://github.com/hmtschnk/kiratech/tree/main/staticfiles/thumbnail" width="450">
+</p>
+
+## Question C
+User view the details of a specific inventory by adding inventory ID at the URL. For example; http://127.0.0.1:8000/inventory/1
+
+## Question D
+Django admin can be accessed using the 'Admin' button at navigation bar or by using this link; http://127.0.0.1:8000/admin
+Admin may add new inventory records at invetorys
+
+## Question C
+All the routings of this project has been tested and they are working fine.
