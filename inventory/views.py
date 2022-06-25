@@ -1,13 +1,34 @@
 from django.shortcuts import render
 from .models import inventory, supplier
+import requests
 
 # Create your views here.
 def index(request):
-    queryset = inventory.objects.all()
+    # queryset = inventory.objects.all()
+    # context = {
+    #     'inventory': queryset,
+    # }
+
+    response = requests.get('http://127.0.0.1:8000/api/inventory')
+    inv_data = response.json()
     context = {
-        'inventory': queryset,
+        'inv_list': inv_data['data'],
     }
     return render(request, "inventory/index.html", context)
+
+def search(request):
+    if request.method=='GET':
+        
+        # Set default search value
+        name = request.GET.get('name', default="")
+
+        # Filter the model
+        response = requests.get('http://127.0.0.1:8000/api/inventory')
+        inv_data = response.json()
+        context = {
+            'inv_list': inv_data['data'],
+        }
+        return render(request, 'inventory/index.html', context)
 
 def search_by_id(request, id="undefined"):
     queryset = inventory.objects.filter(id=id).values().first()
