@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import inventory, supplier
 import requests
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -23,10 +24,11 @@ def search(request):
         name = request.GET.get('name', default="")
 
         # Filter the model
-        response = requests.get('http://127.0.0.1:8000/api/inventory')
-        inv_data = response.json()
+        queryset = inventory.objects.filter(
+            Q(name__icontains=name)
+        )
         context = {
-            'inv_list': inv_data['data'],
+            'inv_list': queryset,
         }
         return render(request, 'inventory/index.html', context)
 

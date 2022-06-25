@@ -6,5 +6,5 @@ app_name = "api"
 
 urlpatterns = [
     path('inventory', inv_view.as_view(), name="inv"),
-    path('inventory/<int:id>', inv_view.as_view(), name="inv_2"),
+    path('inventory/<str:id>', inv_view.as_view(), name="inv_2"),
 ]

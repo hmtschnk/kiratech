@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -10,7 +11,7 @@ from .api import inv_serializer
 class inv_view(APIView):
     def get(self, request, id=None):
         if id:
-            item = inventory.objects.get(id=id)
+            item = inventory.objects.get(name=id)
             serializer = inv_serializer(item)
             inv = serializer.data
             return Response({"data": inv}, status=status.HTTP_200_OK)
