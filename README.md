@@ -80,7 +80,7 @@ Password: demo
 <img src="https://github.com/hmtschnk/kiratech/blob/main/staticfiles/readme_md/admin.png" width="450">
 </p>
 
-Admin may add new inventory records at invetorys
+Admin may add new inventory records at inventorys
 
 ## Question C
 Test case:
