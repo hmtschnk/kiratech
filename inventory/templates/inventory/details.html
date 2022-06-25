@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+    <div class="card mx-auto" style="width: 80%">
+        <div class="card-body">
+            <h5 class="card-title">{{inventory.name}}</h5>
+            <img src="{% static 'thumbnail/thumbnail.png' %}" class="img-fluid" alt="Inventory Thumbnail">
+            <table class="table">
+                <tbody>
+                    {% for key, value in inventory.items %}
+                    <tr>
+                        <th scope="row">{{ key }}</th>
+                        <td>{{ value }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
